@@ -1,6 +1,12 @@
 # strapi-mysql-docker
 
-更多可以參考
+## 🤟 跑起來
+
+```bash
+docker-compose up
+```
+
+## 🧐更多可以參考
 
  - [naskio/docker-strapi](https://github.com/naskio/docker-strapi) 的 `example`
 
