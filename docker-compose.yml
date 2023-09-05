@@ -7,6 +7,7 @@ services:
     ports:
       - '1337:1337'
     environment:
+      PORT: 1337
       NODE_ENV: development
       DATABASE_CLIENT: mysql
       DATABASE_HOST: mysql
