@@ -17,7 +17,7 @@ services:
       DATABASE_PASSWORD: strapi
       DATABASE_SSL: false # boolean for SSL.
     volumes:
-      - app:/srv/app # 左側目錄可以改成本地目錄
+      - ./app:/srv/app # 左側目錄可以改成本地目錄
     depends_on:
       - mysql
 
@@ -25,7 +25,6 @@ services:
     restart: always
     image: mysql
     container_name: mysql
-    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: strapi
       MYSQL_USER: strapi
@@ -34,4 +33,4 @@ services:
     ports:
       - '3306:3306'  # 映射 MySQL 的端口
     volumes:
-      - db:/var/lib/mysql # 左側目錄可以改成本地目錄
+      - ./db:/var/lib/mysql # 左側目錄可以改成本地目錄
