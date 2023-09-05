@@ -16,7 +16,7 @@ services:
       DATABASE_PASSWORD: strapi
       DATABASE_SSL: false # boolean for SSL.
     volumes:
-      - app:/srv/app # create a new project in app volume
+      - app:/srv/app # 左側目錄可以改成本地目錄
     depends_on:
       - mysql
 
@@ -33,8 +33,4 @@ services:
     ports:
       - '3306:3306'  # 映射 MySQL 的端口
     volumes:
-      - db:/var/lib/mysql
-
-volumes:
-  db:
-  app:
+      - db:/var/lib/mysql # 左側目錄可以改成本地目錄
